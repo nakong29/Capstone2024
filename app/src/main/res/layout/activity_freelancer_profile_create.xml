@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topBar"
+        style="@style/CustomToolbarStyle">
+
+        <TextView
+            style="@style/ToolbarTextStyle"
+            android:text="프로필 생성" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/tvJobField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="직군"
+                style="@style/BlackBold16Text" />
+
+            <Spinner
+                android:id="@+id/spinnerJobField"
+                style="@style/SpinnerStyle"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvJobPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="직무"
+                style="@style/BlackBold16Text"
+                android:layout_marginTop="22dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerJobPosition"
+                style="@style/SpinnerStyle"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tvWorkStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="근무 방식"
+                style="@style/BlackBold16Text"
+                android:layout_marginTop="22dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerWorkStyle"
+                style="@style/SpinnerStyle"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tvCareer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="경력"
+                style="@style/BlackBold16Text"
+                android:layout_marginTop="22dp"/>
+
+            <EditText
+                android:id="@+id/etCareer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="0개월 혹은 0년"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시작 가능 날짜"
+                style="@style/BlackBold16Text"
+                android:layout_marginTop="22dp"/>
+
+            <DatePicker
+                android:id="@+id/datePickerStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="calendar"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tvFreelanceExperience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="프리랜서 경험"
+                style="@style/BlackBold16Text"
+                android:layout_marginTop="22dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgFreelanceExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/rbExperienceYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="있음"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbExperienceNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="없음"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvResume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이력서/포트폴리오"
+                style="@style/BlackBold16Text"
+                android:layout_marginTop="22dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAttachFile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="파일 첨부"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"
+                app:strokeColor="@color/light_gray"
+                app:strokeWidth="1dp"
+                app:cornerRadius="3dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tvIntroduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상세 소개 (5000자 이하)"
+                style="@style/BlackBold16Text"
+                android:layout_marginTop="22dp"/>
+
+            <EditText
+                android:id="@+id/etIntroduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLength="5000"
+                android:minLines="3"
+                android:padding="8dp"
+                android:background="@drawable/edittext_border"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tvLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="링크"
+                style="@style/BlackBold16Text"
+                android:layout_marginTop="22dp"/>
+
+            <EditText
+                android:id="@+id/etLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLength="5000"
+                android:minLines="1"
+                android:hint="Github, Notion 등"
+                android:padding="8dp"
+                android:background="@drawable/edittext_border"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/btnComplete"
+                android:layout_width="match_parent"
+                style="@style/PurpleOneButton"
+                android:text="완료"
+                android:layout_marginTop="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
