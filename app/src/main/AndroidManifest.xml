@@ -13,6 +13,12 @@
         android:theme="@style/Theme.CareerHigh"
         tools:targetApi="31">
         <activity
+            android:name=".ClientMain"
+            android:exported="false" />
+        <activity
+            android:name=".FreelancerMain"
+            android:exported="false" />
+        <activity
             android:name=".ProfileCreateComplete"
             android:exported="false" />
         <activity
