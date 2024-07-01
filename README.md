@@ -1,3 +1,6 @@
+<img src="https://github.com/nakong29/Capstone2024/assets/90506854/2e994a95-ed10-49ab-9b18-db255dc37a84"  width="150">
+
+
 ![1](https://github.com/nakong29/Capstone2024/assets/90506854/2e994a95-ed10-49ab-9b18-db255dc37a84)
 ![2](https://github.com/nakong29/Capstone2024/assets/90506854/b5c82516-a3a4-41dc-a787-79dc03c7d654)
 ![3](https://github.com/nakong29/Capstone2024/assets/90506854/06fa5f63-36d2-4830-b64c-2b3daa2f814b)
