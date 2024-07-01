@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardRecommendedFreelancer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/white"
+    app:strokeColor="@color/dark_gray"
+    app:strokeWidth="1dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/coco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/freelancerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="올리비아"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/profileImage"
+            app:layout_constraintTop_toTopOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/workStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원격"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/freelancerName"
+            app:layout_constraintTop_toBottomOf="@id/freelancerName"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/jobField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="# 웹 개발자 # 서버 개발자"
+            android:textSize="14sp"
+            android:textColor="@color/purple"
+            app:layout_constraintTop_toBottomOf="@id/profileImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvCareer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="경력:"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/jobField"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/career"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5년 이상"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/tvCareer"
+            app:layout_constraintTop_toTopOf="@+id/tvCareer"
+            android:layout_marginStart="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRequestJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="의뢰하기"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jobField"
+            app:rippleColor="@color/ripple_color"
+            app:strokeColor="@color/dark_gray"
+            app:strokeWidth="1dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
