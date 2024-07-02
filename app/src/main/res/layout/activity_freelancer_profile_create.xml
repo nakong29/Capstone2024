@@ -27,19 +27,19 @@
             android:padding="18dp">
 
             <TextView
-                android:id="@+id/tvJobField"
+                android:id="@+id/tvJobGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="직군"
                 style="@style/BlackBold16Text" />
 
             <Spinner
-                android:id="@+id/spinnerJobField"
+                android:id="@+id/spinnerJobGroup"
                 style="@style/SpinnerStyle"
                 android:layout_marginTop="10dp" />
 
             <TextView
-                android:id="@+id/tvJobPosition"
+                android:id="@+id/tvJob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="직무"
@@ -47,7 +47,7 @@
                 android:layout_marginTop="22dp"/>
 
             <Spinner
-                android:id="@+id/spinnerJobPosition"
+                android:id="@+id/spinnerJob"
                 style="@style/SpinnerStyle"
                 android:layout_marginTop="10dp"/>
 
@@ -90,14 +90,14 @@
                 android:layout_marginTop="22dp"/>
 
             <DatePicker
-                android:id="@+id/datePickerStart"
+                android:id="@+id/datePickerStartDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:datePickerMode="calendar"
                 android:layout_marginTop="10dp"/>
 
             <TextView
-                android:id="@+id/tvFreelanceExperience"
+                android:id="@+id/tvIsExperienced"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="프리랜서 경험"
@@ -105,7 +105,7 @@
                 android:layout_marginTop="22dp"/>
 
             <RadioGroup
-                android:id="@+id/rgFreelanceExperience"
+                android:id="@+id/rgIsExperienced"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

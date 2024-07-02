@@ -25,12 +25,12 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/btnMapSearch"
+            app:layout_constraintEnd_toStartOf="@+id/btnBookmark"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnMapSearch"
+            android:id="@+id/btnBookmark"
             android:layout_width="26dp"
             android:layout_height="26dp"
             app:backgroundTint="@color/white"
@@ -44,7 +44,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/ProjectJogFiled"
+            android:id="@+id/ProjectJogGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="개발 - 소프트웨어 엔지니어, 서버 개발자"
@@ -61,12 +61,12 @@
             android:text="원격/상주"
             android:textSize="14sp"
             android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/ProjectJogFiled"
+            app:layout_constraintTop_toBottomOf="@id/ProjectJogGroup"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="4dp" />
 
         <TextView
-            android:id="@+id/tvProjectPrice"
+            android:id="@+id/tvSalary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="예상 금액:"
@@ -77,36 +77,36 @@
             android:layout_marginTop="4dp" />
 
         <TextView
-            android:id="@+id/ProjectPrice"
+            android:id="@+id/Salary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="400만원 ~ 500만원"
             android:textSize="14sp"
             android:textColor="@color/black"
-            app:layout_constraintStart_toEndOf="@+id/tvProjectPrice"
-            app:layout_constraintTop_toTopOf="@+id/tvProjectPrice"
+            app:layout_constraintStart_toEndOf="@+id/tvSalary"
+            app:layout_constraintTop_toTopOf="@+id/tvSalary"
             android:layout_marginStart="5dp"/>
 
         <TextView
-            android:id="@+id/tvProjectDeadline"
+            android:id="@+id/tvProjectStartDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="예정 시작일:"
             android:textSize="14sp"
             android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/tvProjectPrice"
+            app:layout_constraintTop_toBottomOf="@id/tvSalary"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="4dp" />
 
         <TextView
-            android:id="@+id/ProjectDeadline"
+            android:id="@+id/ProjectStartDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2024-04-05"
             android:textSize="14sp"
             android:textColor="@color/black"
-            app:layout_constraintStart_toEndOf="@+id/tvProjectDeadline"
-            app:layout_constraintTop_toTopOf="@+id/tvProjectDeadline"
+            app:layout_constraintStart_toEndOf="@+id/tvProjectStartDate"
+            app:layout_constraintTop_toTopOf="@+id/tvProjectStartDate"
             android:layout_marginStart="5dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
