@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".FilterSearch">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topBar"
+        style="@style/CustomToolbarStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:padding="10dp"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            style="@style/ToolbarTextStyle"
+            android:text="검색" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/tvJobGroup"
+        app:layout_constraintStart_toStartOf="@+id/tvJobGroup"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <RadioButton
+            android:id="@+id/radioProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:buttonTint="@color/purple"
+            android:text="프로젝트"
+            style="@style/BlackBold22Text"/>
+
+        <RadioButton
+            android:id="@+id/radioFreelancer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:buttonTint="@color/purple"
+            android:text="프리랜서"
+            style="@style/BlackBold22Text"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvJobGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:text="직군"
+        style="@style/BlackBold16Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+    <Spinner
+        android:id="@+id/spinnerJobGroup"
+        android:layout_width="0dp"
+        style="@style/SpinnerStyle"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/tvJobGroup"
+        app:layout_constraintStart_toStartOf="@id/tvJobGroup"
+        app:layout_constraintTop_toBottomOf="@id/tvJobGroup" />
+
+    <TextView
+        android:id="@+id/tvJob"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="직무"
+        style="@style/BlackBold16Text"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="@id/tvJobGroup"
+        app:layout_constraintStart_toStartOf="@id/tvJobGroup"
+        app:layout_constraintTop_toBottomOf="@id/spinnerJobGroup"/>
+
+    <Spinner
+        android:id="@+id/spinnerJob"
+        android:layout_width="0dp"
+        style="@style/SpinnerStyle"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/tvJobGroup"
+        app:layout_constraintStart_toStartOf="@id/tvJobGroup"
+        app:layout_constraintTop_toBottomOf="@id/tvJob"/>
+
+    <TextView
+        android:id="@+id/tvWorkStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="근무 방식"
+        style="@style/BlackBold16Text"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="@id/tvJobGroup"
+        app:layout_constraintStart_toStartOf="@id/tvJobGroup"
+        app:layout_constraintTop_toBottomOf="@id/spinnerJob"/>
+
+    <Spinner
+        android:id="@+id/spinnerWorkStyle"
+        android:layout_width="0dp"
+        style="@style/SpinnerStyle"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/tvJobGroup"
+        app:layout_constraintStart_toStartOf="@id/tvJobGroup"
+        app:layout_constraintTop_toBottomOf="@id/tvWorkStyle"/>
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="148dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSearch"
+        app:layout_constraintEnd_toEndOf="@+id/tvJobGroup"
+        app:layout_constraintStart_toStartOf="@+id/tvJobGroup">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipJobGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개발"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/purple"
+            app:chipCornerRadius="16dp"
+            app:closeIconTint="@color/white"
+            app:closeIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서버"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/purple"
+            app:chipCornerRadius="16dp"
+            app:closeIconTint="@color/white"
+            app:closeIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipWorkStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원격/상주"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/purple"
+            app:chipCornerRadius="16dp"
+            app:closeIconTint="@color/white"
+            app:closeIconVisible="true" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSearch"
+        style="@style/PurpleOneButton"
+        android:layout_width="0dp"
+        android:text="필터링 검색"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvJobGroup"
+        app:layout_constraintStart_toStartOf="@+id/tvJobGroup" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
