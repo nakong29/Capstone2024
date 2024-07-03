@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CareerHigh"
         tools:targetApi="31">
         <activity
+            android:name=".Apply"
+            android:exported="false" />
+        <activity
             android:name=".FreelancerDetail"
             android:exported="false" />
         <activity
