@@ -33,7 +33,21 @@
             android:layout_marginStart="12dp"
             app:layout_constraintStart_toEndOf="@id/profileImage"
             app:layout_constraintTop_toTopOf="@id/profileImage"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toStartOf="@id/btnBookmark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBookmark"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            app:backgroundTint="@color/purple"
+            app:icon="@drawable/ic_bookmark_border"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="20dp"
+            app:iconTint="@color/white"
+            app:rippleColor="@color/ripple_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/workStyle"

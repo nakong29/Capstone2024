@@ -13,6 +13,12 @@
         android:theme="@style/Theme.CareerHigh"
         tools:targetApi="31">
         <activity
+            android:name=".FreelancerDetail"
+            android:exported="false" />
+        <activity
+            android:name=".ProjectUploadComplete"
+            android:exported="false" />
+        <activity
             android:name=".ProjectUpload"
             android:exported="false" />
         <activity

@@ -30,13 +30,25 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="올리비아"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            style="@style/BlackBold18Text"
             android:layout_marginStart="12dp"
             app:layout_constraintStart_toEndOf="@id/profileImage"
             app:layout_constraintTop_toTopOf="@id/profileImage"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toStartOf="@id/btnBookmark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBookmark"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            app:backgroundTint="@color/white"
+            app:icon="@drawable/ic_bookmark_border"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="20dp"
+            app:iconTint="@color/black"
+            app:rippleColor="@color/ripple_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/workStyle"
