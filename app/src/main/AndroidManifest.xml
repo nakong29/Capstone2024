@@ -13,6 +13,33 @@
         android:theme="@style/Theme.CareerHigh"
         tools:targetApi="31">
         <activity
+            android:name=".CommissionedProjectDetail"
+            android:exported="false" />
+        <activity
+            android:name=".UploadedProject"
+            android:exported="false" />
+        <activity
+            android:name=".FinishedProject"
+            android:exported="false" />
+        <activity
+            android:name=".AppliedProject"
+            android:exported="false" />
+        <activity
+            android:name=".DiscussingProject"
+            android:exported="false" />
+        <activity
+            android:name=".CommissionedProject"
+            android:exported="false" />
+        <activity
+            android:name=".OngoingProject"
+            android:exported="false" />
+        <activity
+            android:name=".ClientMyProject"
+            android:exported="false" />
+        <activity
+            android:name=".FreelancerMyProject"
+            android:exported="false" />
+        <activity
             android:name=".Apply"
             android:exported="false" />
         <activity
