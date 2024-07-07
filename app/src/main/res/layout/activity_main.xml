@@ -73,12 +73,14 @@
         <Button
             android:id="@+id/freelancerButton"
             style="@style/PurpleTwoButton"
+            android:layout_height="65dp"
             android:layout_marginEnd="12dp"
             android:text="프리랜서" />
 
         <Button
             android:id="@+id/clientButton"
             style="@style/PurpleTwoButton"
+            android:layout_height="65dp"
             android:layout_marginStart="12dp"
             android:text="클라이언트" />
     </LinearLayout>
