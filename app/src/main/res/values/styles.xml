@@ -50,6 +50,10 @@
         <item name="android:overlapAnchor">false</item>
     </style>
 
+    <style name="CustomRatingBar" parent="android:style/Widget.Material.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
+    </style>
+
     <style name="BlackBold16Text">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">16sp</item>

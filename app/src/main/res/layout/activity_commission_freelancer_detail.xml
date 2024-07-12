@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".FreelancerDetail">
+    tools:context=".CommissionFreelancerDetail">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/topBar"
@@ -26,7 +26,7 @@
 
         <TextView
             style="@style/ToolbarTextStyle"
-            android:text="프리랜서 상세" />
+            android:text="의뢰한 프리랜서 상세" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -35,7 +35,7 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/btnCommission"
+        app:layout_constraintBottom_toTopOf="@id/btnCommissionCancel"
         app:layout_constraintTop_toBottomOf="@id/topBar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -196,13 +196,13 @@
     </androidx.core.widget.NestedScrollView>
 
     <Button
-        android:id="@+id/btnCommission"
+        android:id="@+id/btnCommissionCancel"
         style="@style/PurpleOneButton"
         android:layout_width="match_parent"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="3dp"
-        android:text="의뢰하기"
+        android:text="의뢰 취소"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
