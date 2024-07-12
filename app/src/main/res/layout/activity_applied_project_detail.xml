@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".FreelancerDetail">
+    tools:context=".AppliedProjectDetail">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/topBar"
@@ -26,7 +26,7 @@
 
         <TextView
             style="@style/ToolbarTextStyle"
-            android:text="프리랜서 상세" />
+            android:text="지원한 프로젝트 상세" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -35,31 +35,22 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/btnCommission"
-        app:layout_constraintTop_toBottomOf="@id/topBar">
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/btnApplyComplete">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="22dp">
 
-            <ImageView
-                android:id="@+id/profileImage"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:src="@drawable/coco"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
-                android:id="@+id/freelancerName"
-                style="@style/BlackBold18Text"
+                android:id="@+id/ProjectTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:text="홍길동"
+                android:text="사내 업무관리 도구 개발 - Java, Spring Framework"
+                style="@style/BlackBold18Text"
                 app:layout_constraintEnd_toStartOf="@+id/btnBookmark"
-                app:layout_constraintStart_toEndOf="@id/profileImage"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.button.MaterialButton
@@ -72,78 +63,59 @@
                 app:iconPadding="0dp"
                 app:iconSize="20dp"
                 app:iconTint="@color/black"
+                app:rippleColor="@color/ripple_color"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:rippleColor="@color/ripple_color" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/workStyle"
+                android:id="@+id/labelCompanyName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="원격"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/freelancerName"
-                app:layout_constraintTop_toBottomOf="@id/freelancerName" />
+                android:text="회사명"
+                style="@style/Black14Text"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/ProjectTitle"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/labelStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시작 예정일"
+                app:layout_constraintStart_toStartOf="@id/labelCompanyName"
+                app:layout_constraintTop_toBottomOf="@id/labelCompanyName"/>
 
             <TextView
                 android:id="@+id/labelJobGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="직군/직무"
-                android:layout_marginTop="12dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/profileImage" />
+                app:layout_constraintStart_toStartOf="@id/labelCompanyName"
+                app:layout_constraintTop_toBottomOf="@id/labelStartDate"/>
 
             <TextView
                 android:id="@+id/labelJobSkill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="스킬"
-                app:layout_constraintStart_toStartOf="@id/labelJobGroup"
-                app:layout_constraintTop_toBottomOf="@id/labelJobGroup" />
+                app:layout_constraintStart_toStartOf="@id/labelCompanyName"
+                app:layout_constraintTop_toBottomOf="@id/labelJobGroup"/>
 
             <TextView
-                android:id="@+id/labelCareer"
-                style="@style/Black14Text"
+                android:id="@+id/labelSalary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="경력"
-                app:layout_constraintStart_toStartOf="@id/labelJobGroup"
-                app:layout_constraintTop_toBottomOf="@id/labelJobSkill" />
+                android:text="예상금액"
+                app:layout_constraintStart_toStartOf="@id/labelCompanyName"
+                app:layout_constraintTop_toBottomOf="@id/labelJobSkill"/>
 
             <TextView
-                android:id="@+id/labelStartDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="시작 가능일"
-                app:layout_constraintStart_toStartOf="@id/labelJobGroup"
-                app:layout_constraintTop_toBottomOf="@id/labelCareer" />
-
-            <TextView
-                android:id="@+id/JobGroup"
+                android:id="@+id/CompanyName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="개발 > 서버 개발"
-                app:layout_constraintBaseline_toBaselineOf="@id/labelJobGroup"
-                app:layout_constraintStart_toStartOf="@id/StartDate" />
-
-            <TextView
-                android:id="@+id/JobSkill"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Java, Spring Framework"
-                app:layout_constraintBaseline_toBaselineOf="@id/labelJobSkill"
-                app:layout_constraintStart_toStartOf="@id/StartDate" />
-
-            <TextView
-                android:id="@+id/Career"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="5년 이상"
-                app:layout_constraintBaseline_toBaselineOf="@id/labelCareer"
-                app:layout_constraintStart_toStartOf="@id/StartDate" />
+                android:text="Happy Company"
+                app:layout_constraintStart_toStartOf="@id/StartDate"
+                app:layout_constraintBaseline_toBaselineOf="@id/labelCompanyName"/>
 
             <TextView
                 android:id="@+id/StartDate"
@@ -151,103 +123,111 @@
                 android:layout_height="wrap_content"
                 android:text="2024-04-06"
                 android:layout_marginStart="16dp"
-                app:layout_constraintBaseline_toBaselineOf="@id/labelStartDate"
-                app:layout_constraintStart_toEndOf="@id/labelStartDate" />
-
+                app:layout_constraintStart_toEndOf="@id/labelStartDate"
+                app:layout_constraintBaseline_toBaselineOf="@id/labelStartDate" />
 
             <TextView
-                android:id="@+id/labelFreelancerIntroduction"
+                android:id="@+id/JobGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="개발 > 서버개발"
+                app:layout_constraintStart_toStartOf="@id/StartDate"
+                app:layout_constraintBaseline_toBaselineOf="@id/labelJobGroup" />
+
+            <TextView
+                android:id="@+id/JobSkill"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Java, Spring Framework"
+                app:layout_constraintStart_toStartOf="@id/StartDate"
+                app:layout_constraintBaseline_toBaselineOf="@id/labelJobSkill" />
+
+            <TextView
+                android:id="@+id/Salary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="500만원 ~ 700만원 (월단위)"
+                app:layout_constraintStart_toStartOf="@id/StartDate"
+                app:layout_constraintBaseline_toBaselineOf="@id/labelSalary" />
+
+            <TextView
+                android:id="@+id/labelProjectDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="[프로젝트 상세 설명]"
                 android:layout_marginTop="28dp"
-                android:text="[상세 소개]"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/labelStartDate" />
+                app:layout_constraintStart_toStartOf="@id/labelCompanyName"
+                app:layout_constraintTop_toBottomOf="@id/labelSalary"/>
 
             <TextView
                 android:id="@+id/ProjectDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/project_detail"
                 android:layout_marginTop="8dp"
-                android:text="@string/freelancer_detail"
-                app:layout_constraintStart_toStartOf="@id/labelJobGroup"
-                app:layout_constraintTop_toBottomOf="@id/labelFreelancerIntroduction" />
-
-            <TextView
-                android:id="@+id/labelLink"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="[링크]"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ProjectDetail" />
-
-            <TextView
-                android:id="@+id/Link"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="https://github.com/hongglidong"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/labelLink" />
+                app:layout_constraintStart_toStartOf="@id/labelCompanyName"
+                app:layout_constraintTop_toBottomOf="@id/labelProjectDetail"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.core.widget.NestedScrollView>
 
     <Button
-        android:id="@+id/btnCommission"
-        style="@style/PurpleOneButton"
+        android:id="@+id/btnApplyComplete"
         android:layout_width="match_parent"
+        style="@style/PurpleOneButton"
+        android:text="지원 완료"
+        android:backgroundTint="@color/dark_gray"
+        android:enabled="false"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="3dp"
-        android:text="의뢰하기"
-        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@id/bottomBar" />
 
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
             android:id="@+id/myProjects"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
+            android:src="@drawable/ic_my_projects"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_my_projects" />
+            android:padding="8dp"
+            android:adjustViewBounds="true" />
 
         <ImageButton
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
+            android:src="@drawable/ic_home"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_home" />
+            android:padding="8dp"
+            android:adjustViewBounds="true" />
 
         <ImageButton
             android:id="@+id/myPage"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
+            android:src="@drawable/ic_my_page"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_my_page" />
+            android:padding="8dp"
+            android:adjustViewBounds="true"/>
 
     </LinearLayout>
 
