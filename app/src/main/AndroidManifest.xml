@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CareerHigh"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".ReviewWriteCompleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FReviewWrite"
+            android:exported="false" />
+        <activity
+            android:name=".CReviewWrite"
+            android:exported="false" />
+        <activity
+            android:name=".FFreelancerDetail"
+            android:exported="false" />
+        <activity
+            android:name=".CProjectDetail"
+            android:exported="false" />
+        <activity
+            android:name=".FRequirement"
+            android:exported="false" />
+        <activity
+            android:name=".FRequirementDetail"
+            android:exported="false" />
+        <activity
+            android:name=".Requirement"
+            android:exported="false" />
+        <activity
+            android:name=".RequirementDetail"
+            android:exported="false" />
+        <activity
+            android:name=".RequirementAdd"
+            android:exported="false" />
+        <activity
+            android:name=".ProjectDashboard"
+            android:exported="false" />
         <activity
             android:name=".ClientFinishedProjectList"
             android:exported="false" />
@@ -137,7 +170,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
