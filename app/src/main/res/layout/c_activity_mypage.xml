@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ClientMypageActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topBar"
+        style="@style/CustomToolbarStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:padding="10dp"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            style="@style/ToolbarTextStyle"
+            android:text="마이 페이지" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/clientProfileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/default_profile_image"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar"/>
+
+    <TextView
+        android:id="@+id/clientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Your Name"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clientProfileImage" />
+
+    <TextView
+        android:id="@+id/clientEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="yourname@email.com"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clientName" />
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        style="@style/PurpleOneButton"
+        android:layout_width="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:text="프로필 편집"
+        app:layout_constraintEnd_toStartOf="@+id/btnBookmarks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clientEmail" />
+
+    <Button
+        android:id="@+id/btnBookmarks"
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="24dp"
+        android:text="북마크"
+        style="@style/PurpleOneButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnEditProfile"
+        app:layout_constraintTop_toTopOf="@+id/btnEditProfile" />
+
+    <Button
+        android:id="@+id/btnProjectManage"
+        style="@style/PurpleOneButton"
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:text="프로젝트 관리"
+        app:layout_constraintEnd_toEndOf="@+id/btnEditProfile"
+        app:layout_constraintStart_toStartOf="@+id/btnEditProfile"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditProfile" />
+
+    <Button
+        android:id="@+id/btnReviewManage"
+        style="@style/PurpleOneButton"
+        android:layout_width="0dp"
+        android:text="리뷰 관리"
+        app:layout_constraintEnd_toEndOf="@+id/btnBookmarks"
+        app:layout_constraintStart_toStartOf="@+id/btnBookmarks"
+        app:layout_constraintTop_toTopOf="@+id/btnProjectManage" />
+
+    <Button
+        android:id="@+id/btnEditAccount"
+        style="@style/PurpleOneButton"
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:text="회원정보 수정"
+        app:layout_constraintEnd_toEndOf="@+id/btnEditProfile"
+        app:layout_constraintStart_toStartOf="@+id/btnEditProfile"
+        app:layout_constraintTop_toBottomOf="@+id/btnProjectManage" />
+
+    <Button
+        android:id="@+id/btnSetting"
+        style="@style/PurpleOneButton"
+        android:layout_width="0dp"
+        android:text="설정"
+        app:layout_constraintEnd_toEndOf="@+id/btnBookmarks"
+        app:layout_constraintStart_toStartOf="@+id/btnBookmarks"
+        app:layout_constraintTop_toTopOf="@+id/btnEditAccount" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="로그 아웃"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:backgroundTint="@color/white"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        app:cornerRadius="8dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditAccount" />
+
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageButton
+            android:id="@+id/myProjects"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_my_projects"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:adjustViewBounds="true" />
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:adjustViewBounds="true" />
+
+        <ImageButton
+            android:id="@+id/myPage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_my_page"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:adjustViewBounds="true"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
