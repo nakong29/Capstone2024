@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_job_group"
+        android:title="직군">
+        <menu>
+            <item
+                android:id="@+id/menu_development"
+                android:title="개발" />
+            <item
+                android:id="@+id/menu_design"
+                android:title="디자인" />
+
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_job"
+        android:title="직무">
+        <menu>
+            <item
+                android:id="@+id/menu_web_developer"
+                android:title="웹 개발자" />
+            <item
+                android:id="@+id/menu_server_developer"
+                android:title="서버 개발자" />
+            <item
+                android:id="@+id/menu_software_developer"
+                android:title="소프트웨어 개발자" />
+            <item
+                android:id="@+id/menu_backend_developer"
+                android:title="백엔드 개발자" />
+            <item
+                android:id="@+id/menu_frontend_developer"
+                android:title="프론트엔드 개발자" />
+            <item
+                android:id="@+id/menu_java_developer"
+                android:title="자바 개발자" />
+            <item
+                android:id="@+id/menu_android_developer"
+                android:title="안드로이드 개발자" />
+            <item
+                android:id="@+id/menu_ios_developer"
+                android:title="iOS 개발자" />
+            <item
+                android:id="@+id/menu_c_cpp_developer"
+                android:title="C/C++ 개발자" />
+            <item
+                android:id="@+id/menu_nodejs_developer"
+                android:title="Node.js 개발자" />
+            <item
+                android:id="@+id/menu_data_engineer"
+                android:title="데이터 엔지니어" />
+            <item
+                android:id="@+id/menu_system_network_admin"
+                android:title="시스템/네트워크 관리자" />
+            <item
+                android:id="@+id/menu_python_developer"
+                android:title="파이썬 개발자" />
+            <item
+                android:id="@+id/menu_machine_learning_engineer"
+                android:title="머신러닝 엔지니어" />
+            <item
+                android:id="@+id/menu_security_engineer"
+                android:title="보안 엔지니어" />
+            <item
+                android:id="@+id/menu_uiux_designer"
+                android:title="UI/UX 디자이너" />
+            <item
+                android:id="@+id/menu_graphic_designer"
+                android:title="그래픽 디자이너" />
+            <item
+                android:id="@+id/menu_mobile_designer"
+                android:title="모바일 디자이너" />
+            <item
+                android:id="@+id/menu_web_designer"
+                android:title="웹 디자이너" />
+            <item
+                android:id="@+id/menu_ad_designer"
+                android:title="광고 디자이너" />
+            <item
+                android:id="@+id/menu_illustrator"
+                android:title="일러스트레이터" />
+            <item
+                android:id="@+id/menu_2d_designer"
+                android:title="2D 디자이너" />
+            <item
+                android:id="@+id/menu_bibx_designer"
+                android:title="BI/BX 디자이너" />
+            <item
+                android:id="@+id/menu_product_designer"
+                android:title="제품 디자이너" />
+            <item
+                android:id="@+id/menu_3d_designer"
+                android:title="3D 디자이너" />
+            <item
+                android:id="@+id/menu_video_motion_designer"
+                android:title="영상/모션 디자이너" />
+            <item
+                android:id="@+id/menu_character_designer"
+                android:title="캐릭터 디자이너" />
+            <item
+                android:id="@+id/menu_fashion_designer"
+                android:title="패션 디자이너" />
+            <item
+                android:id="@+id/menu_space_designer"
+                android:title="공간 디자이너" />
+            <item
+                android:id="@+id/menu_publishing_editor_designer"
+                android:title="출판/편집 디자이너" />
+            <item
+                android:id="@+id/menu_industrial_designer"
+                android:title="산업 디자이너" />
+            <item
+                android:id="@+id/menu_interior_designer"
+                android:title="인테리어 디자이너" />
+            <item
+                android:id="@+id/menu_furniture_designer"
+                android:title="가구 디자이너" />
+            <item
+                android:id="@+id/menu_landscape_designer"
+                android:title="조경 디자이너" />
+        </menu>
+    </item>
+</menu>

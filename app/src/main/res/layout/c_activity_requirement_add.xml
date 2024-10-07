@@ -84,13 +84,34 @@
                 android:padding="8dp" />
 
             <TextView
+                android:id="@+id/tvPriority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="중요도"
+                style="@style/BlackBold16Text"
+                android:layout_marginTop="18dp"
+                app:layout_constraintTop_toBottomOf="@id/RequirementDescription" />
+
+            <EditText
+                android:id="@+id/Priority"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="00%"
+                android:inputType="number"
+                android:maxLength="3"
+                app:layout_constraintTop_toBottomOf="@id/tvPriority"
+                android:padding="8dp" />
+
+            <TextView
                 android:id="@+id/tvRequirementDeadline"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="마감 기한"
                 style="@style/BlackBold16Text"
                 android:layout_marginTop="18dp"
-                app:layout_constraintTop_toBottomOf="@id/RequirementDescription" />
+                app:layout_constraintTop_toBottomOf="@id/Priority" />
 
             <DatePicker
                 android:id="@+id/datePickerRequirementDeadline"

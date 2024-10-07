@@ -122,54 +122,92 @@
         app:layout_constraintStart_toStartOf="@id/tvJobGroup"
         app:layout_constraintTop_toBottomOf="@id/tvWorkStyle"/>
 
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/salaryLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="148dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSearch"
-        app:layout_constraintEnd_toEndOf="@+id/tvJobGroup"
-        app:layout_constraintStart_toStartOf="@+id/tvJobGroup">
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/spinnerWorkStyle"
+        app:layout_constraintStart_toStartOf="@id/tvJobGroup"
+        app:layout_constraintEnd_toEndOf="@id/tvJobGroup">
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipJobGroup"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="개발"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            app:chipBackgroundColor="@color/purple"
-            app:chipCornerRadius="16dp"
-            app:closeIconTint="@color/white"
-            app:closeIconVisible="true" />
+            android:text="금액"
+            style="@style/BlackBold16Text"
+            android:layout_marginTop="18dp"/>
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipJob"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/SalaryStart"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="000만원"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이상"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/SalaryEnd"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="000만원"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이하"
+                android:layout_margin="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/careerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/spinnerWorkStyle"
+        app:layout_constraintStart_toStartOf="@id/tvJobGroup"
+        app:layout_constraintEnd_toEndOf="@id/tvJobGroup">
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="서버"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            app:chipBackgroundColor="@color/purple"
-            app:chipCornerRadius="16dp"
-            app:closeIconTint="@color/white"
-            app:closeIconVisible="true" />
+            android:text="경력"
+            style="@style/BlackBold16Text"
+            android:layout_marginTop="18dp"/>
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipWorkStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="원격/상주"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            app:chipBackgroundColor="@color/purple"
-            app:chipCornerRadius="16dp"
-            app:closeIconTint="@color/white"
-            app:closeIconVisible="true" />
+        <EditText
+            android:id="@+id/etCareer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:hint="00년 이상"
+            android:padding="8dp" />
+    </LinearLayout>
 
-    </com.google.android.material.chip.ChipGroup>
+
+
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSearch"
